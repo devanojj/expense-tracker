@@ -1,5 +1,10 @@
+import { useAddTransaction } from "../../hooks/useAddTransaction"
+
 export const ExpenseTracker = () => {
+  const { addTransaction } = useAddTransaction();
+
   return (
+    <>
     <div className="expense-tracker">
       <div className="container">
       <h1>Expense Tracker</h1>
@@ -32,6 +37,12 @@ export const ExpenseTracker = () => {
          </form> 
     </div>
     </div>
+
+    <div className="transactions">
+       <h3>Transactions</h3>
+
+    </div>
+    </>
 
 
   );
